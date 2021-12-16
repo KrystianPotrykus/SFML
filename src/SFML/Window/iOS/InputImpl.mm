@@ -40,6 +40,8 @@ namespace priv
 bool InputImpl::isKeyPressed(Keyboard::Key key)
 {
     // Not applicable
+    (void)key;
+
     return false;
 }
 
@@ -55,6 +57,8 @@ void InputImpl::setVirtualKeyboardVisible(bool visible)
 bool InputImpl::isMouseButtonPressed(Mouse::Button button)
 {
     // Not applicable
+    (void)button;
+
     return false;
 }
 
@@ -79,6 +83,7 @@ Vector2i InputImpl::getMousePosition(const WindowBase& relativeTo)
 void InputImpl::setMousePosition(const Vector2i& position)
 {
     // Not applicable
+    (void)position;
 }
 
 
@@ -86,6 +91,8 @@ void InputImpl::setMousePosition(const Vector2i& position)
 void InputImpl::setMousePosition(const Vector2i& position, const WindowBase& relativeTo)
 {
     // Not applicable
+    (void)position;
+    (void)relativeTo;
 }
 
 

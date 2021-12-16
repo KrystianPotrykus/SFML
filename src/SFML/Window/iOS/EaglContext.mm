@@ -35,6 +35,14 @@
 #include <QuartzCore/CAEAGLLayer.h>
 #include <dlfcn.h>
 
+#if defined(__APPLE__)
+    #if defined(__clang__)
+        #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    #elif defined(__GNUC__)
+        #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+    #endif
+#endif
+
 
 namespace
 {
@@ -123,6 +131,11 @@ m_depthbuffer (0),
 m_vsyncEnabled(false),
 m_clock       ()
 {
+    (void) shared;
+    (void) settings;
+    (void) width;
+    (void) height;
+
     ensureInit();
 
     // This constructor should never be used by implementation
@@ -179,7 +192,11 @@ GlFunctionPointer EaglContext::getFunction(const char* name)
     }
 
     if (module)
-        return reinterpret_cast<GlFunctionPointer>(dlsym(module, name));
+    {
+        GlFunctionPointer ptr;
+        *reinterpret_cast<void**>(&ptr) = dlsym(module, name);
+        return ptr;
+    }
 
     return 0;
 }
@@ -205,7 +222,7 @@ void EaglContext::recreateRenderBuffers(SFView* glView)
     glGenRenderbuffersOESFunc(1, &m_colorbuffer);
     glBindRenderbufferOESFunc(GL_RENDERBUFFER_OES, m_colorbuffer);
     if (glView)
-        [m_context renderbufferStorage:GL_RENDERBUFFER_OES fromDrawable:(CAEAGLLayer*)glView.layer];
+        [m_context renderbufferStorage:GL_RENDERBUFFER_OES fromDrawable:(static_cast<CAEAGLLayer*>(glView.layer))];
     glFramebufferRenderbufferOESFunc(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, m_colorbuffer);
 
     // Create a depth buffer if requested
@@ -281,6 +298,8 @@ void EaglContext::createContext(EaglContext* shared,
                                 unsigned int bitsPerPixel,
                                 const ContextSettings& settings)
 {
+    (void) bitsPerPixel;
+
     // Save the settings
     m_settings = settings;
 

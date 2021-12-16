@@ -43,12 +43,12 @@ std::streambuf::int_type LogcatStream::overflow (std::streambuf::int_type c)
 {
     if (c == "\n"[0])
     {
-        m_message.push_back(c);
+        m_message.push_back(static_cast<char>(c));
         LOGE("%s", m_message.c_str());
         m_message.clear();
     }
 
-    m_message.push_back(c);
+    m_message.push_back(static_cast<char>(c));
 
     return traits_type::not_eof(c);
 }

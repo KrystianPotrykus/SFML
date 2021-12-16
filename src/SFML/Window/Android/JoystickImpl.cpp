@@ -51,6 +51,8 @@ void JoystickImpl::cleanup()
 bool JoystickImpl::isConnected(unsigned int index)
 {
     // To implement
+    (void) index;
+
     return false;
 }
 
@@ -59,6 +61,8 @@ bool JoystickImpl::isConnected(unsigned int index)
 bool JoystickImpl::open(unsigned int index)
 {
     // To implement
+    (void) index;
+
     return false;
 }
 

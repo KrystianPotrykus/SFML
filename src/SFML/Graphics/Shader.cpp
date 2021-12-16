@@ -1037,6 +1037,9 @@ Shader::~Shader()
 ////////////////////////////////////////////////////////////
 bool Shader::loadFromFile(const std::string& filename, Type type)
 {
+    (void) filename;
+    (void) type;
+
     return false;
 }
 
@@ -1044,6 +1047,9 @@ bool Shader::loadFromFile(const std::string& filename, Type type)
 ////////////////////////////////////////////////////////////
 bool Shader::loadFromFile(const std::string& vertexShaderFilename, const std::string& fragmentShaderFilename)
 {
+    (void) vertexShaderFilename;
+    (void) fragmentShaderFilename;
+
     return false;
 }
 
@@ -1051,6 +1057,10 @@ bool Shader::loadFromFile(const std::string& vertexShaderFilename, const std::st
 ////////////////////////////////////////////////////////////
 bool Shader::loadFromFile(const std::string& vertexShaderFilename, const std::string& geometryShaderFilename, const std::string& fragmentShaderFilename)
 {
+    (void) vertexShaderFilename;
+    (void) geometryShaderFilename;
+    (void) fragmentShaderFilename;
+
     return false;
 }
 
@@ -1058,6 +1068,9 @@ bool Shader::loadFromFile(const std::string& vertexShaderFilename, const std::st
 ////////////////////////////////////////////////////////////
 bool Shader::loadFromMemory(const std::string& shader, Type type)
 {
+    (void) shader;
+    (void) type;
+
     return false;
 }
 
@@ -1065,6 +1078,9 @@ bool Shader::loadFromMemory(const std::string& shader, Type type)
 ////////////////////////////////////////////////////////////
 bool Shader::loadFromMemory(const std::string& vertexShader, const std::string& fragmentShader)
 {
+    (void) vertexShader;
+    (void) fragmentShader;
+
     return false;
 }
 
@@ -1072,6 +1088,10 @@ bool Shader::loadFromMemory(const std::string& vertexShader, const std::string& 
 ////////////////////////////////////////////////////////////
 bool Shader::loadFromMemory(const std::string& vertexShader, const std::string& geometryShader, const std::string& fragmentShader)
 {
+    (void) vertexShader;
+    (void) geometryShader;
+    (void) fragmentShader;
+
     return false;
 }
 
@@ -1079,6 +1099,9 @@ bool Shader::loadFromMemory(const std::string& vertexShader, const std::string& 
 ////////////////////////////////////////////////////////////
 bool Shader::loadFromStream(InputStream& stream, Type type)
 {
+    (void) stream;
+    (void) type;
+
     return false;
 }
 
@@ -1086,6 +1109,9 @@ bool Shader::loadFromStream(InputStream& stream, Type type)
 ////////////////////////////////////////////////////////////
 bool Shader::loadFromStream(InputStream& vertexShaderStream, InputStream& fragmentShaderStream)
 {
+    (void) vertexShaderStream;
+    (void) fragmentShaderStream;
+
     return false;
 }
 
@@ -1093,6 +1119,10 @@ bool Shader::loadFromStream(InputStream& vertexShaderStream, InputStream& fragme
 ////////////////////////////////////////////////////////////
 bool Shader::loadFromStream(InputStream& vertexShaderStream, InputStream& geometryShaderStream, InputStream& fragmentShaderStream)
 {
+    (void) vertexShaderStream;
+    (void) geometryShaderStream;
+    (void) fragmentShaderStream;
+
     return false;
 }
 
@@ -1100,192 +1130,266 @@ bool Shader::loadFromStream(InputStream& vertexShaderStream, InputStream& geomet
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, float x)
 {
+    (void) name;
+    (void) x;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, const Glsl::Vec2& v)
 {
+    (void) name;
+    (void) v;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, const Glsl::Vec3& v)
 {
+    (void) name;
+    (void) v;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, const Glsl::Vec4& v)
 {
+    (void) name;
+    (void) v;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, int x)
 {
+    (void) name;
+    (void) x;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, const Glsl::Ivec2& v)
 {
+    (void) name;
+    (void) v;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, const Glsl::Ivec3& v)
 {
+    (void) name;
+    (void) v;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, const Glsl::Ivec4& v)
 {
+    (void) name;
+    (void) v;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, bool x)
 {
+    (void) name;
+    (void) x;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, const Glsl::Bvec2& v)
 {
+    (void) name;
+    (void) v;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, const Glsl::Bvec3& v)
 {
+    (void) name;
+    (void) v;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, const Glsl::Bvec4& v)
 {
+    (void) name;
+    (void) v;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, const Glsl::Mat3& matrix)
 {
+    (void) name;
+    (void) matrix;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, const Glsl::Mat4& matrix)
 {
+    (void) name;
+    (void) matrix;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, const Texture& texture)
 {
+    (void) name;
+    (void) texture;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniform(const std::string& name, CurrentTextureType)
 {
+    (void) name;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniformArray(const std::string& name, const float* scalarArray, std::size_t length)
 {
+    (void) name;
+    (void) scalarArray;
+    (void) length;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniformArray(const std::string& name, const Glsl::Vec2* vectorArray, std::size_t length)
 {
+    (void) name;
+    (void) vectorArray;
+    (void) length;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniformArray(const std::string& name, const Glsl::Vec3* vectorArray, std::size_t length)
 {
+    (void) name;
+    (void) vectorArray;
+    (void) length;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniformArray(const std::string& name, const Glsl::Vec4* vectorArray, std::size_t length)
 {
+    (void) name;
+    (void) vectorArray;
+    (void) length;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniformArray(const std::string& name, const Glsl::Mat3* matrixArray, std::size_t length)
 {
+    (void) name;
+    (void) matrixArray;
+    (void) length;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setUniformArray(const std::string& name, const Glsl::Mat4* matrixArray, std::size_t length)
 {
+    (void) name;
+    (void) matrixArray;
+    (void) length;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setParameter(const std::string& name, float x)
 {
+    (void) name;
+    (void) x;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setParameter(const std::string& name, float x, float y)
 {
+    (void) name;
+    (void) x;
+    (void) y;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setParameter(const std::string& name, float x, float y, float z)
 {
+    (void) name;
+    (void) x;
+    (void) y;
+    (void) z;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setParameter(const std::string& name, float x, float y, float z, float w)
 {
+    (void) name;
+    (void) x;
+    (void) y;
+    (void) z;
+    (void) w;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setParameter(const std::string& name, const Vector2f& v)
 {
+    (void) name;
+    (void) v;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setParameter(const std::string& name, const Vector3f& v)
 {
+    (void) name;
+    (void) v;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setParameter(const std::string& name, const Color& color)
 {
+    (void) name;
+    (void) color;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setParameter(const std::string& name, const Transform& transform)
 {
+    (void) name;
+    (void) transform;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setParameter(const std::string& name, const Texture& texture)
 {
+    (void) name;
+    (void) texture;
 }
 
 
 ////////////////////////////////////////////////////////////
 void Shader::setParameter(const std::string& name, CurrentTextureType)
 {
+    (void) name;
 }
 
 
@@ -1299,6 +1403,7 @@ unsigned int Shader::getNativeHandle() const
 ////////////////////////////////////////////////////////////
 void Shader::bind(const Shader* shader)
 {
+    (void) shader;
 }
 
 
@@ -1319,6 +1424,10 @@ bool Shader::isGeometryAvailable()
 ////////////////////////////////////////////////////////////
 bool Shader::compile(const char* vertexShaderCode, const char* geometryShaderCode, const char* fragmentShaderCode)
 {
+    (void) vertexShaderCode;
+    (void) geometryShaderCode;
+    (void) fragmentShaderCode;
+
     return false;
 }
 
